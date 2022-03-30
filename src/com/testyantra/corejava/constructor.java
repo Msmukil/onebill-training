@@ -7,11 +7,11 @@ public class constructor {
 
 	public static void main(String[] args) {
 		constructor con = new constructor();
-		Addition.add(12,12);
+		//Addition.add(12,12);
 		System.out.println("Addition.a");
-		Addition a = new Addition();
+		//Addition a = new Addition();
 		methodoverloading.add(13, 12);
-		System.out.println("the value of b is"+a);
+		//System.out.println("the value of b is"+a);
 		
 		
 	}
