@@ -4,9 +4,14 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Test {
+	private static final Predicate<? super Employee> p = null;
+
 	public static void main(String[] args) {
 		List<Employee> asList = Arrays.asList(new Employee(1,"mukilan","tester",10000),
 				new Employee(2,"mohan","hr",30000),
@@ -23,6 +28,20 @@ public class Test {
 		System.out.println(max2);
 		
 		asList.parallelStream().max(Comparator.comparing(Employee::getSalary)).ifPresent(System.out::println);
+		
+	/*	boolean anyMatch2 = stream.anyMatch(p);
+		System.out.println(anyMatch2);
+		System.out.println("any match===");*/
+		boolean anyMatch = asList.stream().anyMatch(emp->emp.getName()=="harish");
+		System.out.println(anyMatch);
+		System.out.println("for each and filter");
+		List<Employee> collect = asList.stream().filter(emp->emp.getSalary()>1000).collect(Collectors.toList());
+		Consumer<Employee> c = (emp)->{
+			System.out.println(emp);
+	};
+	collect.forEach(c);
+		}
 	}
 
-}
+
+
