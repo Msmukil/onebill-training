@@ -10,7 +10,7 @@ package com.testyantra.practicequestions;
 			number = scanner.nextInt();
 			temp = number;
 			scanner.close();
-			while (temp > 0) {
+			while (temp> 0) {
 				result = result * 10 +  (temp % 10); 
 				temp = temp /10;
 			}
