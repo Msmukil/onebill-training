@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee>
+    <add>
+        <city>qwer</city>
+        <houseno>-32</houseno>
+        <pincode>98676</pincode>
+        <street>abc</street>
+    </add>
+    <designation>developer</designation>
+    <id>1</id>
+    <name>raj</name>
+    <salary>20000.0</salary>
+</employee>
